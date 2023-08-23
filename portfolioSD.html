@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gheleb Netabai - Portfolio :: Software Development</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="portfolioGN.css">
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gheleb Netabai's work portfolio for Software Development. Includes certifications (including C++ and Java) and his experience programming storage/recall systems for laser analysis with LabView.">
+</head>
+
+<body>
+
+    <h1>
+        <a href="index.html">Gheleb Netabai's Professional Portfolio</a>
+    </h1>
+
+    <nav>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutMe.html">About Me</a>
+            <div class="dropdown">
+                <button class="dropbtn">Experience
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="profRefs.html">Professional References</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Portfolio
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="portfolioSD.html">Software Development</a>
+                    <a href="portfolioH&S.html">Health & Sciences</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Information</a>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div id="portSDhero"></div>
+
+        <main>
+            <h2>Porfolio :: Software Development</h2>
+            <section>
+                <h3><b>Here you will find a comprehensive overview of my professional experience in the Software Development field, with reference links when possible.</b></h3>
+                <p>
+                    For a wider, albeit less comprehensive, overview of my career spanning all fields, feel free to visit my LinkedIn page: <a href="https://www.linkedin.com/in/gheleb-netabai">https://www.linkedin.com/in/gheleb-netabai</a>
+                </p>
+            </section>
+
+            <section>
+                <h3><b>Certifications</b></h3>
+                <table>
+                    <tr>
+                        <th>Certification Title</th>
+                        <th>Description</th>
+                        <th>Current</th>
+                        <th>Outdated</th>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Java programming language certification, assessed by College Board.</td>
+                        <td></td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>C++ programming language certification, assessed by College Board.</td>
+                        <td></td>
+                        <td>X</td>
+                    </tr>
+                </table>
+            </section>
+
+            <div id="flow">
+                <section>
+                    <h3><b>Chemistry Research Study</b></h3>
+                    <p>
+                        January 2019 - May 2019
+                        <br>
+                        <img src="GhelebWLabViewStudyProgram.jpg" alt="Pictured: Gheleb Netabai posed alongside an open laptop demonstrating his laser data-storage/recall program." width=250 height=250 style="float: right; max-width: 100%; height: auto; vertical-align: middle; margin-left: 10px;">
+                        <i>In collaboration with Wei Wei, Ph.D.</i>
+                        <br>
+                        During my Sophomore year at Franklin College I assisted a professor, whom I'd previously taken Chemistry with, in programming LabVIEW software for a research study he and his colleagues had conducted prior. My participation in this chemistry research study involved first familiarizing myself with the coding language of LabVIEW before programming a more efficient data-storage/recall system for a laser data analysis program <b>[Pictured right]</b> that they'd previously utilized to support their research findings.
+                    </p>
+                </section>
+            </div>
+
+        </main>
+
+        <footer>
+            <br>
+            Copyright © 2023 Gheleb Netabai
+            <br>
+            <div id="last_modified"></div>
+            <script>
+                const lastModified = new Date(document.lastModified);
+                const formattedDate = lastModified.toLocaleDateString();
+                const message = `This page was last modified on: ${formattedDate}`;
+                const lastModifiedDiv = document.getElementById('last_modified');
+                lastModifiedDiv.textContent = message;
+            </script>
+        </footer>
+    </div>
+
+</body>
+
+
+</html>

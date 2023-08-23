@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gheleb Netabai - Contact Information</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="portfolioGN.css">
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A contact information page where users can fill out a google form to contact Gheleb Netabai directly. Allows for direct messaging and leaving personal information.">
+</head>
+
+<body>
+
+    <h1>
+        <a href="index.html">Gheleb Netabai's Professional Portfolio</a>
+    </h1>
+
+    <nav>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutMe.html">About Me</a>
+            <div class="dropdown">
+                <button class="dropbtn">Experience
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="profRefs.html">Professional References</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Portfolio
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="portfolioSD.html">Software Development</a>
+                    <a href="portfolioH&S.html">Health & Sciences</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Information</a>
+        </div>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        function postToGoogle() {
+            var field1 = $("#myFName").val();
+            var field2 = $("#myLName").val();
+            var field3 = $("#myEmail").val();
+            var field4 = $("#myPhone").val();
+            var field5 = $("#myComments").val();
+
+            $.ajax({
+                url: "https://docs.google.com/forms/u/4/d/e/1FAIpQLSekcoJHHFsCaC3xWydXlkVC89JynkEC2bmDGwtSMqMOEKR73w/formResponse",
+
+                //add your google form generated numbers below which are also the 'names' of your inputs     
+                data: {
+                    "entry.2005620554": field1,
+                    "entry.1483990537": field2,
+                    "entry.1045781291": field3,
+                    "entry.1166974658": field4,
+                    "entry.839337160": field5
+                },
+                type: "POST",
+                dataType: "xml",
+                success: function (d) {
+                    $('#contact').trigger('reset');
+                },
+                error: function (x, y, z) {
+                    $('#contact').trigger('reset');
+                }
+            });
+            alert("Your message has been successfully submitted!\n\nPlease wait at least 3-5 business days for a response before submitting another.")
+            return false;
+        }
+    </script>
+
+
+    <div id="wrapper">
+        <div id="contacthero"></div>
+
+        <main>
+            <h2>Contact Gheleb</h2>
+
+            <h3>Use the form below to contact Gheleb Netabai for all professional inquiries.</h3>
+            <img src="GhelebHeadshot.jpg" alt="A headshot of Gheleb Netabai circa 2019." width=200 height=200 style="float: right; max-width: 100%; height: auto; vertical-align: middle; margin-left: 10px;">
+            <p style="color:red">Required fields are marked with an asterisk (*)</p>
+
+            <script type="text/javascript">
+                function validateForm() {
+                    var numText = document.getElementById("myPhone").value.trim();
+                    var emailText = document.getElementById("myEmail").value;
+                    var phoneFormat1 = /^\d{3}-\d{3}-\d{4}$/; // xxx-xxx-xxxx
+                    var phoneFormat2 = /^\(\d{3}\)\s?\d{3}-\d{4}$/; // (xxx) xxx-xxxx or (xxx)xxx-xxxx
+                    var phoneFormat3 = /^\d{10}$/; // xxxxxxxxxx
+                    var emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // email format
+                    if ((numText === "" || phoneFormat1.test(numText) || phoneFormat2.test(numText) || phoneFormat3.test(numText)) && emailFormat.test(emailText)) {
+                        return true;
+                    } else if (numText !== "" && !phoneFormat1.test(numText) && !phoneFormat2.test(numText) && !phoneFormat3.test(numText)) {
+                        alert("Invalid phone number. Please enter a valid phone number in one of the following formats: \nxxx-xxx-xxxx\n(xxx) xxx-xxxx or (xxx)xxx-xxxx\nxxxxxxxxxx");
+                    } else if (!emailFormat.test(emailText)) {
+                        alert("Invalid email address. Please enter a valid email address.");
+                    }
+                    return false;
+                }
+
+
+            </script>
+            
+            <form method="post" id="contact" onsubmit="return postToGoogle();">
+
+                <label for="myFName">* First Name:</label>
+                <input type="text" name="entry.2005620554" id="myFName" required>
+
+                <label for="myLName">* Last Name:</label>
+                <input type="text" name="entry.1483990537" id="myLName" required>
+                
+                <label for="myEmail">* E-mail:</label>
+                <input type="text" name="entry.1045781291" id="myEmail" required>
+
+                <label for="myPhone">&nbsp;&nbsp;&nbsp;Phone:</label>
+                <input type="text" name="entry.1166974658" id="myPhone">
+
+                <label for="myComments">* Message:</label>
+                <textarea name="entry.839337160" id="myComments" cols="20" rows="5" required></textarea>
+
+                <input type="submit" name="mySubmit" value="Submit" onclick="return validateForm();">
+            </form>
+
+        </main>
+
+        <footer>
+            <br>
+            Copyright © 2023 Gheleb Netabai
+            <br>
+            <div id="last_modified"></div>
+            <script>
+                const lastModified = new Date(document.lastModified);
+                const formattedDate = lastModified.toLocaleDateString();
+                const message = `This page was last modified on: ${formattedDate}`;
+                const lastModifiedDiv = document.getElementById('last_modified');
+                lastModifiedDiv.textContent = message;
+            </script>
+        </footer>
+    </div>
+
+</body>
+
+
+</html>

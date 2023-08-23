@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gheleb Netabai - Professional Portfolio</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="portfolioGN.css">
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official website for Gheleb Netabai's professional portfolio. Here you'll find useful resources regarding Gheleb's work experience in the technology and medical fields, contact information, references, etc.">
+</head>
+
+<body>
+    <h1>
+        <a href="index.html">Gheleb Netabai's Professional Portfolio</a>
+    </h1>
+
+    <nav>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutMe.html">About Me</a>
+            <div class="dropdown">
+                <button class="dropbtn">Experience
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="profRefs.html">Professional References</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Portfolio
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="portfolioSD.html">Software Development</a>
+                    <a href="portfolioH&S.html">Health & Sciences</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Information</a>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div id="homehero"></div>
+
+        <main>
+            <h2>Welcome to the official webpage for all professional information related to Gheleb Netabai!</h2>
+            <p>
+                Here you can find all professionally relevant information relating to Gheleb Netabai and his past exploits in the fields of Information Technology and Medical Sciences.
+            </p>
+            <p>
+                If you are accessing this website, it will be assumed that you are one or more of the following demographics:
+            </p>
+            <ul>
+                <li>Job Recruiters</li>
+
+                <li>Potential Employers</li>
+
+                <li>Organizations evaluating Gheleb Netabai for employment</li>
+
+                <li>A colleague of Gheleb Netabai</li>
+
+                <li>A random, curious individual that happened to stumble upon this website's link</li>
+            </ul>
+            <p>
+                If you are not a member of any of these or related groups; please reach out to Gheleb Netabai via the <a href="contact.html">Contact Information</a> page and notify him of how you discovered this link, should you have the time.
+            </p>
+        </main>
+
+        <footer>
+            <br>
+            Copyright © 2023 Gheleb Netabai
+            <br>
+            <div id="last_modified"></div>
+            <script>
+                const lastModified = new Date(document.lastModified);
+                const formattedDate = lastModified.toLocaleDateString();
+                const message = `This page was last modified on: ${formattedDate}`;
+                const lastModifiedDiv = document.getElementById('last_modified');
+                lastModifiedDiv.textContent = message;
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>
