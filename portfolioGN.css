@@ -381,4 +381,7 @@ textarea {
     img {
         margin-right: 150px;
     }
+    iframe {
+        margin-right: 10px;
+    }
 }
