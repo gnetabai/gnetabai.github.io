@@ -262,6 +262,34 @@ textarea {
         flex-direction: column;
     }
 
+    #homehero {
+        background-size: 100% 100%;
+    }
+
+    #abouthero {
+        background-size: 100% 100%;
+    }
+
+    #resumehero {
+        background-size: 100% 100%;
+    }
+
+    #refhero {
+        background-size: 100% 100%;
+    }
+
+
+    #portSDhero {
+        background-size: 100% 100%;
+    }
+
+    #portHShero {
+        background-size: 100% 100%;
+    }
+
+    #contacthero {
+        background-size: 100% 100%;
+    }
 }
 
 @media (min-width: 600px) {
@@ -305,10 +333,6 @@ textarea {
 
     #desktop {
         display: inline;
-    }
-
-    #homehero {
-        background-size: 100% 100%;
     }
 
     #homehero {
